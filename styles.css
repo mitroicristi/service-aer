@@ -1,63 +1,111 @@
 
-body {
+html, body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f7f8;
-    color: #333;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #264653;
 }
 
 header {
-    background: #0077b6;
-    color: #fff;
+    background: #2a9d8f;
+    color: white;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header .logo {
+.logo {
     font-size: 1.5em;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .hero {
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
-    background: #caf0f8;
+    background: #e0f7f4;
 }
 
 .call-button {
-    background-color: #0077b6;
+    background-color: #2a9d8f;
     color: white;
     padding: 12px 25px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 25px;
+    transition: background 0.3s ease;
+}
+.call-button:hover {
+    background-color: #21867a;
 }
 
-.services, .contact {
-    padding: 30px 20px;
+.services {
+    padding: 50px 20px;
+    background: #f7fdfa;
+    text-align: center;
 }
 
-.services h2, .contact h2 {
-    color: #0077b6;
+.services h2 {
+    margin-bottom: 30px;
+    color: #2a9d8f;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #d6ebe8;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #2a9d8f;
+    margin-bottom: 20px;
 }
 
 footer {
-    background: #023e8a;
+    background: #264653;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
+    font-size: 0.9em;
 }
