@@ -109,3 +109,13 @@ footer {
     padding: 15px 0;
     font-size: 0.9em;
 }
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
