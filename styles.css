@@ -173,3 +173,86 @@ footer {
   margin-bottom: 15px;
   line-height: 1.6;
 }
+
+.seo-links {
+  padding: 50px 20px;
+  background: #f7fdfc;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+.seo-links h2 {
+  color: #2a9d8f;
+  margin-bottom: 20px;
+}
+.seo-links ul {
+  list-style: none;
+  padding-left: 0;
+}
+.seo-links ul li {
+  margin-bottom: 10px;
+}
+.seo-links ul li a {
+  color: #264653;
+  text-decoration: none;
+}
+.seo-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.despre-noi {
+  padding: 60px 20px;
+  background: #ffffff;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #264653;
+}
+.despre-noi h2 {
+  color: #2a9d8f;
+  margin-bottom: 20px;
+}
+.despre-noi ul {
+  list-style: none;
+  padding-left: 0;
+}
+.despre-noi ul li {
+  margin-bottom: 10px;
+}
+.despre-noi p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.faq {
+  padding: 60px 20px;
+  background: #f0fdfa;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #264653;
+}
+.faq h2 {
+  color: #2a9d8f;
+  margin-bottom: 30px;
+}
+.faq-item {
+  margin-bottom: 25px;
+}
+.faq-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #1d7373;
+}
+.faq-item p {
+  line-height: 1.6;
+}
+
+.logo a,
+.logo-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.logo a:hover {
+  opacity: 0.85;
+}

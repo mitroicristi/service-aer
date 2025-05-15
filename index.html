@@ -18,11 +18,106 @@
   <meta name="twitter:description" content="Montaj, igienizare și reparații aer condiționat în București și Ilfov." />
   <meta name="twitter:image" content="https://www.serviceaer.ro/images/montaj-aer.jpg" />
   <link rel="stylesheet" href="styles.css?v=2" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "ServiceAer.ro",
+        "url": "https://www.serviceaer.ro",
+        "logo": "https://www.serviceaer.ro/images/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+40-765-289-421",
+          "contactType": "customer service",
+          "areaServed": ["RO"],
+          "availableLanguage": ["ro"]
+        },
+        "sameAs": []
+      },
+      {
+        "@type": "LocalBusiness",
+        "name": "ServiceAer.ro",
+        "image": "https://www.serviceaer.ro/images/logo.png",
+        "telephone": "+40-765-289-421",
+        "email": "contact@serviceaer.ro",
+        "priceRange": "$$",
+        "url": "https://www.serviceaer.ro",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "București",
+          "addressRegion": "IF",
+          "addressCountry": "RO"
+        },
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.4268,
+            "longitude": 26.1025
+          },
+          "geoRadius": 30000
+        }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Service aer condiționat",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "ServiceAer.ro",
+          "url": "https://www.serviceaer.ro"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "București și Ilfov"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Cât durează montajul unui aparat de aer condiționat?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Montajul standard durează între 2 și 3 ore. Pentru cazuri complexe, poate dura mai mult."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Oferiți garanție pentru reparații?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da, toate lucrările beneficiază de garanție scrisă între 3 și 12 luni."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Este igienizarea aparatului obligatorie?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Recomandăm igienizarea de 2 ori pe an pentru prevenirea bacteriilor și menținerea eficienței."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Lucrați și în weekend sau seara?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da, avem echipe disponibile în afara programului standard, cu programare telefonică."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="page-wrapper">
     <header>
-      <div class="logo">ServiceAer.ro</div>
+      <div class="logo"><a href="/" class="logo-link">ServiceAer.ro</a></div>
       <nav>
         <ul>
           <li><a href="#servicii">Servicii</a></li>
@@ -47,10 +142,61 @@
       <img src="images/montaj-aer.jpg" alt="Tehnician instalând un aparat de aer condiționat" />
     </section>
 
+    <section class="despre-noi">
+      <h2>De ce să alegi ServiceAer.ro?</h2>
+      <p>Cu o experiență solidă în domeniul instalațiilor HVAC, ServiceAer.ro oferă servicii de încredere pentru aparate de aer condiționat în București și Ilfov.</p>
+      <p>Fie că este vorba de montaj, curățare, reparații sau întreținere periodică, echipa noastră intervine rapid și eficient, folosind echipamente profesionale și materiale de calitate.</p>
+      <ul>
+        <li>🔧 Personal calificat, cu experiență reală în teren</li>
+        <li>⏱️ Timp de intervenție rapid (în aceeași zi, dacă este disponibil)</li>
+        <li>💰 Prețuri transparente, fără costuri ascunse</li>
+        <li>📍 Acoperim toate zonele din București și Ilfov</li>
+        <li>✅ Garanție pentru lucrările efectuate</li>
+      </ul>
+      <p>Ne mândrim cu sute de clienți mulțumiți și o reputație construită prin seriozitate, punctualitate și rezultate. Alege ServiceAer.ro și bucură-te de aer curat și confort deplin, indiferent de sezon.</p>
+    </section>
+
     <section id="contact" class="contact">
       <h2>Contact</h2>
       <p><strong>Telefon:</strong> <a href="tel:+40765289421">+40 765 289 421</a></p>
       <p><strong>Email:</strong> <a href="mailto:contact@serviceaer.ro">contact@serviceaer.ro</a></p>
+    </section>
+    <section class="seo-links">
+      <h2>Servicii extinse</h2>
+      <ul>
+        <li><a href="service-aer-bucuresti.html">Service București</a></li>
+        <li><a href="service-aer-ilfov.html">Service Ilfov</a></li>
+        <li><a href="service-aer-urgente.html">Urgențe aer condiționat</a></li>
+        <li><a href="service-aer-rezidential.html">Service rezidențial</a></li>
+        <li><a href="service-aer-industrial.html">Service industrial</a></li>
+        <li><a href="montaj-aer-conditionat.html">Montaj aparate</a></li>
+        <li><a href="curatare-aer-conditionat.html">Curățare & igienizare</a></li>
+        <li><a href="intretinere-aer-conditionat.html">Întreținere periodică</a></li>
+      </ul>
+    </section>
+    <section class="faq">
+      <h2>Întrebări frecvente</h2>
+
+      <div class="faq-item">
+        <h3>Cât durează montajul unui aparat de aer condiționat?</h3>
+        <p>În general, montajul standard durează între 2 și 3 ore. Pentru instalații mai complexe (perete de beton, traseu extins), poate dura mai mult.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Oferiți garanție pentru reparații?</h3>
+        <p>Da, toate lucrările vin cu garanție scrisă. Garanția variază între 3 și 12 luni în funcție de natura intervenției.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Este igienizarea aparatului obligatorie?</h3>
+        <p>Recomandăm igienizarea de 2 ori pe an. Ajută la prevenirea mirosurilor, a bacteriilor și la menținerea eficienței aparatului.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Lucrați și în weekend sau seara?</h3>
+        <p>Da, avem echipe disponibile și în afara programului standard. Vă rugăm să ne contactați telefonic pentru disponibilitate.</p>
+      </div>
+
     </section>
 
     <footer>
