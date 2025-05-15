@@ -67,6 +67,17 @@ nav ul li a {
     text-align: center;
 }
 
+.services img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 12px;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
 .services h2 {
     margin-bottom: 30px;
     color: #2a9d8f;
@@ -120,7 +131,7 @@ footer {
     margin-top: auto;
 }
 
-/* FIXED BUTTON IN MIJLOCUL PAGINII */
+/* FIXED BUTTON */
 .call-fixed-center {
     position: fixed;
     top: 50%;
