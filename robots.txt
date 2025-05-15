@@ -1,3 +1,14 @@
 User-agent: *
 Allow: /
+
+# Exclud fișiere și foldere sensibile sau nefolositoare în SEO
+Disallow: /admin/
+Disallow: /test/
+Disallow: /drafts/
+Disallow: /private/
+Disallow: /scripts/
+Disallow: /tmp/
+Disallow: /404.html
+
+# Sitemap (pentru crawl și indexare corectă)
 Sitemap: https://www.serviceaer.ro/sitemap.xml

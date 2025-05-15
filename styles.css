@@ -149,3 +149,27 @@ footer {
 .call-fixed-center:hover {
     background-color: #21867a;
 }
+
+.seo-content {
+  padding: 50px 20px;
+  background: #ffffff;
+  color: #264653;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.seo-content h1 {
+  color: #2a9d8f;
+  margin-bottom: 20px;
+}
+
+.seo-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.seo-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
