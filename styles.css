@@ -113,6 +113,11 @@ nav ul li a {
     margin-bottom: 20px;
 }
 
+#contact {
+  scroll-margin-top: 100px;
+}
+
+
 footer {
     background: #264653;
     color: white;
