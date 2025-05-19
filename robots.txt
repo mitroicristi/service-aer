@@ -1,4 +1,6 @@
 User-agent: *
+Allow: /
+
 Disallow: /cdn-cgi/l/
 Disallow: /admin/
 Disallow: /test/
@@ -7,6 +9,7 @@ Disallow: /private/
 Disallow: /scripts/
 Disallow: /tmp/
 Disallow: /404.html
-Allow: /
+Disallow: /*.md$
+Disallow: /*.txt$
 
 Sitemap: https://www.serviceaer.ro/sitemap.xml
