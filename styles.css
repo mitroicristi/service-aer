@@ -135,7 +135,7 @@ footer {
 .call-fixed-center {
     position: fixed;
     top: 50%;
-    left: 80%;
+    left: 89%;
     transform: translate(-50%, -50%);
     background-color: #2a9d8f;
     color: white;
