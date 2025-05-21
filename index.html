@@ -215,6 +215,23 @@
     </footer>
   </div>
 
-  <a href="tel:+40765289421" class="call-button-fixed">Sună acum</a>
+  <a href="tel:+40765289421" class="call-button-fixed" id="call-button">
+   Sună acum
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var callButton = document.getElementById('call-button');
+      if (callButton) {
+        callButton.addEventListener('click', function () {
+          gtag('event', 'click_to_call', {
+            'event_category': 'engagement',
+            'event_label': 'Sună acum',
+            'value': 1
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
