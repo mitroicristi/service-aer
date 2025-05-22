@@ -46,7 +46,26 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 ServiceAer.ro – Toate drepturile rezervate.</p>
+    <p>&copy; 2025 ServiceAer.ro – Toate drepturile rezervate. <a href="politica-confidentialitate.html">Confidențialitate</a></p>
   </footer>
+
+  
+<!-- Cookie notice (global) -->
+<div id="cookie-banner" style="position:fixed; bottom:0; width:100%; background:#f1f1f1; padding:10px; text-align:center; z-index:1000; display:none;">
+  Acest site folosește cookie-uri pentru analiză. <a href="politica-confidentialitate.html">Detalii</a>.
+  <button onclick="acceptCookies()">Am înțeles</button>
+</div>
+
+<script>
+  function acceptCookies() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  window.addEventListener('DOMContentLoaded', function () {
+    if (!localStorage.getItem('cookiesAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  });
+</script>
 </body>
-</html>
