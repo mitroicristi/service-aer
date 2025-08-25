@@ -1,0 +1,224 @@
+/* Stiluri personalizate pentru meniul redesenat */
+
+/* Stiluri pentru dropdown-uri */
+.dropdown-menu {
+    border: none !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    border-radius: 15px !important;
+    padding: 15px 0 !important;
+    margin-top: 10px !important;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+    border: 1px solid rgba(102, 126, 234, 0.1) !important;
+}
+
+/* Asigură-te că dropdown-urile sunt vizibile când au clasa .show */
+.dropdown-menu.show {
+    display: block !important;
+}
+
+.dropdown-item {
+    padding: 12px 25px;
+    color: #495057;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 2px 15px;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.dropdown-item.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Stiluri pentru butoanele de meniu */
+.navbar-nav .nav-link {
+    padding: 12px 20px;
+    margin: 0 5px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-nav .nav-link:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.navbar-nav .nav-link.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* Stiluri pentru iconițe */
+.navbar-nav .nav-link i {
+    margin-right: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover i {
+    transform: scale(1.1);
+}
+
+/* Stiluri pentru dropdown-toggle */
+.dropdown-toggle::after {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown.show .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+/* Stiluri pentru navbar */
+.navbar {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+/* Stiluri pentru galeria de poze profesionale */
+.hover-lift {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+.card {
+    transition: all 0.3s ease;
+    border: none;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Stiluri pentru galeria de poze */
+.gallery-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.gallery-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.gallery-card .card-title {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.gallery-card .card-text {
+    color: #6c757d;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Stiluri responsive */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+        margin: 5px 0;
+        border-radius: 15px;
+    }
+    
+    .dropdown-menu {
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        margin-top: 0;
+        padding: 0;
+    }
+    
+    .dropdown-item {
+        margin: 2px 0;
+        border-radius: 10px;
+        background: rgba(102, 126, 234, 0.1);
+    }
+    
+    .dropdown-item:hover {
+        background: rgba(102, 126, 234, 0.2);
+        color: #667eea;
+        transform: none;
+    }
+}
+
+/* Animații pentru meniu */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu.show {
+    animation: slideDown 0.3s ease;
+}
+
+/* Stiluri pentru brand */
+.navbar-brand {
+    font-weight: 700;
+    color: #667eea !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+    color: #764ba2 !important;
+}
+
+/* Stiluri pentru toggle button */
+.navbar-toggler {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Stiluri pentru active state */
+.navbar-nav .nav-item.dropdown.show .nav-link {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
