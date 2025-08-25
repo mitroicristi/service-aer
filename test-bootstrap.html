@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Bootstrap</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <h1>Test Bootstrap</h1>
+    <div id="status"></div>
+    
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    
+    <script>
+        const status = document.getElementById('status');
+        
+        // Verifică Popper.js
+        if (typeof Popper !== 'undefined') {
+            status.innerHTML = '<p style="color: green;">✅ Popper.js este încărcat</p>';
+        } else {
+            status.innerHTML = '<p style="color: red;">❌ Popper.js NU este încărcat</p>';
+        }
+        
+        // Verifică Bootstrap
+        if (typeof bootstrap !== 'undefined') {
+            status.innerHTML += '<p style="color: green;">✅ Bootstrap este încărcat</p>';
+            
+            // Verifică componentele
+            const components = ['Dropdown', 'Collapse', 'Modal', 'Tooltip'];
+            components.forEach(component => {
+                if (bootstrap[component]) {
+                    status.innerHTML += '<p style="color: green;">✅ ' + component + ' este disponibil</p>';
+                } else {
+                    status.innerHTML += '<p style="color: red;">❌ ' + component + ' NU este disponibil</p>';
+                }
+            });
+            
+            // Test Dropdown
+            if (bootstrap.Dropdown) {
+                status.innerHTML += '<p style="color: green;">✅ Bootstrap.Dropdown este disponibil</p>';
+                
+                // Verifică metodele
+                const methods = ['getInstance', 'getOrCreateInstance'];
+                methods.forEach(method => {
+                    if (typeof bootstrap.Dropdown[method] === 'function') {
+                        status.innerHTML += '<p style="color: green;">✅ Metoda ' + method + ' este disponibilă</p>';
+                    } else {
+                        status.innerHTML += '<p style="color: red;">❌ Metoda ' + method + ' NU este disponibilă</p>';
+                    }
+                });
+            }
+        } else {
+            status.innerHTML += '<p style="color: red;">❌ Bootstrap NU este încărcat</p>';
+        }
+    </script>
+</body>
+</html>
+
+

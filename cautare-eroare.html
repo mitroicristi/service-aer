@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Căutare Erori Aer Condiționat - Găsește Rapid Soluția</title>
+    <meta name="description" content="Caută rapid erorile de aer condiționat. Introdu codul de eroare și găsește imediat semnificația și soluțiile.">
+    <meta name="keywords" content="cautare eroare aer conditionat, cod eroare aer conditionat, ghid erori aer conditionat">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <!-- Page Wrapper -->
+    <div class="page-wrapper">
+        
+        <!-- Header -->
+        <header class="atf-top-header navbar-light bg-white fixed-top">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo-black.png" alt="Erori Aer Condiționat" height="50">
+                    </a>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Acasă</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="eroare-complete.html">Toate Erorile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="cautare-eroare.html">Căutare</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#diagnosticare">Diagnosticare</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section" style="padding-top: 120px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; min-height: 60vh; display: flex; align-items: center;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h1 class="display-4 fw-bold mb-4">Caută Erorile Aer Condiționat</h1>
+                        <p class="lead mb-4">Introdu codul de eroare și găsește imediat semnificația și soluțiile</p>
+                        
+                        <!-- Search Form -->
+                        <div class="search-form-container bg-white p-4 rounded shadow-lg">
+                            <form id="searchForm" class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-lg" id="errorCode" placeholder="Ex: E1, E4, E5, DF..." required>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-select form-select-lg" id="brandSelect">
+                                        <option value="">Toate mărcile</option>
+                                        <option value="vortex">Vortex</option>
+                                        <option value="samsung">Samsung</option>
+                                        <option value="beko">Beko</option>
+                                        <option value="gree">Gree</option>
+                                        <option value="daikin">Daikin</option>
+                                        <option value="lg">LG</option>
+                                        <option value="midea">Midea</option>
+                                        <option value="hisense">Hisense</option>
+                                        <option value="tesla">Tesla</option>
+                                        <option value="yamato">Yamato</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="fas fa-search"></i> Caută
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Results Section -->
+        <section id="searchResults" class="py-5" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="h1 fw-bold text-center mb-5">Rezultatele Căutării</h2>
+                        <div id="resultsContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Errors Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="h1 fw-bold">Erori Populare</h2>
+                        <p class="lead">Cele mai căutate coduri de eroare</p>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center popular-error-card" data-error="E1">
+                            <div class="card-body">
+                                <div class="error-badge mb-3">
+                                    <span class="badge bg-danger fs-3">E1</span>
+                                </div>
+                                <h5 class="card-title">Eroare E1</h5>
+                                <p class="card-text">Senzor de temperatură defect</p>
+                                <button class="btn btn-outline-primary btn-sm view-details">Vezi Detalii</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center popular-error-card" data-error="E4">
+                            <div class="card-body">
+                                <div class="error-badge mb-3">
+                                    <span class="badge bg-danger fs-3">E4</span>
+                                </div>
+                                <h5 class="card-title">Eroare E4</h5>
+                                <p class="card-text">Eroare de comunicare</p>
+                                <button class="btn btn-outline-primary btn-sm view-details">Vezi Detalii</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center popular-error-card" data-error="E5">
+                            <div class="card-body">
+                                <div class="error-badge mb-3">
+                                    <span class="badge bg-danger fs-3">E5</span>
+                                </div>
+                                <h5 class="card-title">Eroare E5</h5>
+                                <p class="card-text">Protecție suprasolicitare</p>
+                                <button class="btn btn-outline-primary btn-sm view-details">Vezi Detalii</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center popular-error-card" data-error="DF">
+                            <div class="card-body">
+                                <div class="error-badge mb-3">
+                                    <span class="badge bg-warning fs-3">DF</span>
+                                </div>
+                                <h5 class="card-title">Eroare DF</h5>
+                                <p class="card-text">Eroare de defrost</p>
+                                <button class="btn btn-outline-primary btn-sm view-details">Vezi Detalii</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Error Database Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="h1 fw-bold">Baza de Date Erori</h2>
+                        <p class="lead">Toate erorile organizate pe categorii</p>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0"><i class="fas fa-thermometer-half me-2"></i>Erori de Senzor</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        E1 - Senzor Temperatură
+                                        <span class="badge bg-primary rounded-pill">Comun</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        E2 - Senzor Presiune
+                                        <span class="badge bg-secondary rounded-pill">Rar</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        E3 - Senzor Comunicare
+                                        <span class="badge bg-primary rounded-pill">Comun</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-warning text-dark">
+                                <h5 class="mb-0"><i class="fas fa-exchange-alt me-2"></i>Erori de Comunicare</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        E4 - Comunicare Unități
+                                        <span class="badge bg-primary rounded-pill">Comun</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        EC - Eroare Comunicare
+                                        <span class="badge bg-primary rounded-pill">Comun</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        C1 - Comunicare Exterioară
+                                        <span class="badge bg-secondary rounded-pill">Rar</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-danger text-white">
+                                <h5 class="mb-0"><i class="fas fa-shield-alt me-2"></i>Erori de Protecție</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        E5 - Protecție Suprasolicitare
+                                        <span class="badge bg-primary rounded-pill">Comun</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        H5 - Protecție Termică
+                                        <span class="badge bg-secondary rounded-pill">Rar</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        H6 - Protecție Compresor
+                                        <span class="badge bg-secondary rounded-pill">Rar</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Solutions Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="h1 fw-bold">Soluții Rapide</h2>
+                        <p class="lead">Rezolvări imediate pentru erorile comune</p>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="card border-success">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0"><i class="fas fa-check-circle me-2"></i>Erori Ușor de Rezolvat</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-success">
+                                    <h6>E1 - Senzor Temperatură</h6>
+                                    <p class="mb-0">Verifică conexiunile senzorului și resetează sistemul.</p>
+                                </div>
+                                <div class="alert alert-success">
+                                    <h6>E4 - Comunicare</h6>
+                                    <p class="mb-0">Verifică cablurile și resetează sistemul.</p>
+                                </div>
+                                <div class="alert alert-success">
+                                    <h6>DF - Defrost</h6>
+                                    <p class="mb-0">Curăță unitatea și verifică drenajul.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="card border-warning">
+                            <div class="card-header bg-warning text-dark">
+                                <h5 class="mb-0"><i class="fas fa-exclamation-triangle me-2"></i>Erori Care Necesită Tehnician</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-warning">
+                                    <h6>E5 - Suprasolicitare</h6>
+                                    <p class="mb-0">Verifică freonul și contactează un tehnician.</p>
+                                </div>
+                                <div class="alert alert-warning">
+                                    <h6>F0 - Freon</h6>
+                                    <p class="mb-0">Probleme cu freonul - necesită tehnician.</p>
+                                </div>
+                                <div class="alert alert-warning">
+                                    <h6>H5/H6 - Protecție</h6>
+                                    <p class="mb-0">Protecții termice - necesită tehnician.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-5 bg-dark text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="h1 fw-bold">Ai Nevoie de Ajutor?</h2>
+                        <p class="lead">Contactează-ne pentru asistență tehnică specializată</p>
+                    </div>
+                </div>
+                
+                <!-- Butoane de Contact -->
+                <div class="row justify-content-center mb-5">
+                    <div class="col-12 text-center">
+                        <h4 class="mb-4">Contactează-ne Rapid</h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="tel:0765289421" class="btn btn-primary btn-lg">
+                                <i class="fas fa-phone me-2"></i>Apel Direct
+                            </a>
+                            <a href="tel:0765289421" class="btn btn-success btn-lg">
+                                <i class="fas fa-mobile-alt me-2"></i>Telefon Mobil
+                            </a>
+                            <a href="tel:0765289421" class="btn btn-info btn-lg">
+                                <i class="fas fa-headset me-2"></i>Suport Tehnic
+                            </a>
+                            <a href="tel:0765289421" class="btn btn-warning btn-lg">
+                                <i class="fas fa-tools me-2"></i>Reparații
+                            </a>
+                            <a href="tel:0765289421" class="btn btn-danger btn-lg">
+                                <i class="fas fa-exclamation-triangle me-2"></i>Urgențe
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="contact-info text-center">
+                            <p><i class="fas fa-phone me-2"></i>0765 289 421</p>
+                            <p><i class="fas fa-envelope me-2"></i>info@erori-aer-conditionat.ro</p>
+                            <p><i class="fas fa-clock me-2"></i>Luni-Vineri: 8:00-18:00</p>
+                            <p><i class="fas fa-tools me-2"></i>Servicii de reparații și mentenanță</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-4 bg-light text-center">
+            <div class="container">
+                <p>&copy; 2024 Erori Aer Condiționat. Toate drepturile rezervate.</p>
+                <p class="small text-muted">Ghid complet pentru diagnosticarea și rezolvarea erorilor de aer condiționat</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <!-- jQuery -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Search Functionality -->
+    <script>
+        // Database of error codes
+        const errorDatabase = {
+            'E1': {
+                code: 'E1',
+                title: 'Eroare Senzor Temperatură',
+                description: 'Eroare de senzor de temperatură defect sau conexiuni slăbite.',
+                causes: ['Senzor de temperatură defect', 'Conexiuni electrice slăbite', 'Placă de control defectă'],
+                solutions: ['Verifică conexiunile senzorului', 'Înlocuiește senzorul dacă e necesar', 'Contactează un tehnician'],
+                severity: 'Medium',
+                brand: 'Toate mărcile'
+            },
+            'E4': {
+                code: 'E4',
+                title: 'Eroare de Comunicare',
+                description: 'Probleme de comunicare între unitatea interioară și exterioară.',
+                causes: ['Cabluri de comunicare defecte', 'Probleme cu placa de control', 'Unitatea exterioară defectă'],
+                solutions: ['Verifică cablurile de comunicare', 'Resetează sistemul', 'Verifică unitatea exterioară'],
+                severity: 'Medium',
+                brand: 'Toate mărcile'
+            },
+            'E5': {
+                code: 'E5',
+                title: 'Eroare de Protecție la Suprasolicitare',
+                description: 'Compresor suprasolicitat sau probleme cu freonul.',
+                causes: ['Compresor suprasolicitat', 'Probleme cu freonul', 'Ventilatoare blocate'],
+                solutions: ['Verifică nivelul de freon', 'Curăță ventilatoarele', 'Resetează sistemul'],
+                severity: 'High',
+                brand: 'Toate mărcile'
+            },
+            'DF': {
+                code: 'DF',
+                title: 'Eroare de Defrost/Descongelare',
+                description: 'Probleme cu sistemul de defrost sau descongelare.',
+                causes: ['Senzor de temperatură defect', 'Probleme cu sistemul de defrost', 'Condensare excesivă'],
+                solutions: ['Verifică senzorii de temperatură', 'Curăță unitatea', 'Verifică drenajul'],
+                severity: 'Low',
+                brand: 'Toate mărcile'
+            },
+            'EC': {
+                code: 'EC',
+                title: 'Eroare de Comunicare',
+                description: 'Probleme de comunicare cu placa de control.',
+                causes: ['Probleme cu placa de control', 'Cabluri defecte', 'Interferențe electrice'],
+                solutions: ['Verifică cablurile', 'Resetează sistemul', 'Verifică sursa de alimentare'],
+                severity: 'Medium',
+                brand: 'Toate mărcile'
+            },
+            'F0': {
+                code: 'F0',
+                title: 'Eroare de Freon',
+                description: 'Probleme cu nivelul de freon în sistem.',
+                causes: ['Nivel scăzut de freon', 'Scurgeri în sistem', 'Probleme cu compresorul'],
+                solutions: ['Verifică nivelul de freon', 'Caută scurgeri', 'Contactează un tehnician'],
+                severity: 'High',
+                brand: 'Toate mărcile'
+            }
+        };
+
+        // Search functionality
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const errorCode = document.getElementById('errorCode').value.toUpperCase();
+            const brand = document.getElementById('brandSelect').value;
+            
+            if (errorDatabase[errorCode]) {
+                displaySearchResult(errorDatabase[errorCode]);
+            } else {
+                displayNoResults(errorCode);
+            }
+        });
+
+        // Display search results
+        function displaySearchResult(error) {
+            const resultsContainer = document.getElementById('resultsContainer');
+            const searchResults = document.getElementById('searchResults');
+            
+            resultsContainer.innerHTML = `
+                <div class="card border-${getSeverityColor(error.severity)}">
+                    <div class="card-header bg-${getSeverityColor(error.severity)} text-white">
+                        <h3 class="mb-0">${error.code} - ${error.title}</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="lead">${error.description}</p>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5><i class="fas fa-exclamation-triangle text-warning me-2"></i>Cauze posibile:</h5>
+                                <ul class="list-group list-group-flush">
+                                    ${error.causes.map(cause => `<li class="list-group-item">${cause}</li>`).join('')}
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5><i class="fas fa-tools text-success me-2"></i>Soluții:</h5>
+                                <ul class="list-group list-group-flush">
+                                    ${error.solutions.map(solution => `<li class="list-group-item">${solution}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <span class="badge bg-${getSeverityColor(error.severity)} fs-6">Severitate: ${error.severity}</span>
+                            <span class="badge bg-info fs-6 ms-2">Marcă: ${error.brand}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            searchResults.style.display = 'block';
+            searchResults.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Display no results message
+        function displayNoResults(errorCode) {
+            const resultsContainer = document.getElementById('resultsContainer');
+            const searchResults = document.getElementById('searchResults');
+            
+            resultsContainer.innerHTML = `
+                <div class="card border-warning">
+                    <div class="card-header bg-warning text-dark">
+                        <h3 class="mb-0">Nu am găsit eroarea ${errorCode}</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="lead">Eroarea ${errorCode} nu există în baza noastră de date.</p>
+                        <p>Încearcă să:</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Verifici dacă ai scris corect codul</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Cauți în pagina cu toate erorile</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Contactezi un tehnician specializat</li>
+                        </ul>
+                        <a href="eroare-complete.html" class="btn btn-primary">Vezi Toate Erorile</a>
+                    </div>
+                </div>
+            `;
+            
+            searchResults.style.display = 'block';
+            searchResults.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Get severity color
+        function getSeverityColor(severity) {
+            switch(severity.toLowerCase()) {
+                case 'low': return 'success';
+                case 'medium': return 'warning';
+                case 'high': return 'danger';
+                default: return 'secondary';
+            }
+        }
+
+        // Popular error cards click functionality
+        document.querySelectorAll('.popular-error-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const errorCode = this.dataset.error;
+                document.getElementById('errorCode').value = errorCode;
+                document.getElementById('searchForm').dispatchEvent(new Event('submit'));
+            });
+        });
+
+        // View details buttons
+        document.querySelectorAll('.view-details').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const errorCode = this.closest('.popular-error-card').dataset.error;
+                document.getElementById('errorCode').value = errorCode;
+                document.getElementById('searchForm').dispatchEvent(new Event('submit'));
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Meniu</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    <!-- Menu Styles CSS -->
+    <link rel="stylesheet" href="assets/css/menu-styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Debug</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fa fa-exclamation-triangle"></i> Erori
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Erori Complete</a></li>
+                            <li><a class="dropdown-item" href="#">Căutare Erori</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Debug Meniu</h1>
+        <div id="debug-info"></div>
+    </div>
+
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    
+    <script>
+        // Debug info
+        const debugInfo = document.getElementById('debug-info');
+        
+        // Verifică Popper.js
+        if (typeof Popper !== 'undefined') {
+            debugInfo.innerHTML += '<p style="color: green;">✅ Popper.js este încărcat</p>';
+        } else {
+            debugInfo.innerHTML += '<p style="color: red;">❌ Popper.js NU este încărcat</p>';
+        }
+        
+        // Verifică Bootstrap
+        if (typeof bootstrap !== 'undefined') {
+            debugInfo.innerHTML += '<p style="color: green;">✅ Bootstrap este încărcat</p>';
+            debugInfo.innerHTML += '<p>Versiune Bootstrap: ' + (bootstrap.VERSION || 'Unknown') + '</p>';
+        } else {
+            debugInfo.innerHTML += '<p style="color: red;">❌ Bootstrap NU este încărcat</p>';
+        }
+        
+        // Verifică Dropdown
+        if (typeof bootstrap !== 'undefined' && bootstrap.Dropdown) {
+            debugInfo.innerHTML += '<p style="color: green;">✅ Bootstrap Dropdown este disponibil</p>';
+        } else {
+            debugInfo.innerHTML += '<p style="color: red;">❌ Bootstrap Dropdown NU este disponibil</p>';
+        }
+        
+        // Test dropdown manual
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            
+            if (dropdownToggle && dropdownMenu) {
+                debugInfo.innerHTML += '<p style="color: green;">✅ Elementele dropdown sunt găsite</p>';
+                
+                // Test click
+                dropdownToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    debugInfo.innerHTML += '<p>🖱️ Dropdown clicked!</p>';
+                    
+                    // Toggle manual
+                    if (dropdownMenu.classList.contains('show')) {
+                        dropdownMenu.classList.remove('show');
+                        debugInfo.innerHTML += '<p>🔽 Dropdown închis</p>';
+                    } else {
+                        dropdownMenu.classList.add('show');
+                        debugInfo.innerHTML += '<p>🔼 Dropdown deschis</p>';
+                    }
+                });
+            } else {
+                debugInfo.innerHTML += '<p style="color: red;">❌ Elementele dropdown NU sunt găsite</p>';
+            }
+        });
+    </script>
+</body>
+</html>
+
+

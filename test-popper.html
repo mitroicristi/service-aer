@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Popper.js</title>
+</head>
+<body>
+    <h1>Test Popper.js</h1>
+    <div id="status"></div>
+    
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    
+    <script>
+        const status = document.getElementById('status');
+        
+        if (typeof Popper !== 'undefined') {
+            status.innerHTML = '<p style="color: green;">✅ Popper.js este încărcat</p>';
+            status.innerHTML += '<p>Versiune: ' + (Popper.version || 'Unknown') + '</p>';
+            
+            // Test Popper
+            const reference = document.createElement('div');
+            const popper = document.createElement('div');
+            document.body.appendChild(reference);
+            document.body.appendChild(popper);
+            
+            try {
+                const instance = Popper.createPopper(reference, popper, {
+                    placement: 'bottom',
+                });
+                status.innerHTML += '<p style="color: green;">✅ Popper.createPopper funcționează</p>';
+                instance.destroy();
+            } catch (error) {
+                status.innerHTML += '<p style="color: red;">❌ Eroare Popper: ' + error.message + '</p>';
+            }
+            
+            // Cleanup
+            document.body.removeChild(reference);
+            document.body.removeChild(popper);
+        } else {
+            status.innerHTML = '<p style="color: red;">❌ Popper.js NU este încărcat</p>';
+        }
+    </script>
+</body>
+</html>
+
+
